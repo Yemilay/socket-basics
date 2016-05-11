@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 
 // "on" listen for events
 io.on('connection', function (socket) {
-    console.log('USer connected via socket.io!');
+    console.log('User connected via socket.io!');
 
     socket.on('message', function (message) {
         console.log('Message recived: ' + message.text);
