@@ -3,3 +3,8 @@ var socket = io(); //io() is created by the library
 socket.on('connect', function () {
     console.log('Connected to socket.io server!');
 });
+
+socket.on('message', function (message) {
+    console.log('New message: ');
+    console.log(message.text);
+});
